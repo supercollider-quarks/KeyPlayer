@@ -122,7 +122,7 @@ ARGUMENT:: char
 the char for which to put the action
 
 ARGUMENT:: func
-the action
+the action. Is called with arguments code::func.value(char, modifiers, unicode, keycode)::
 
 ARGUMENT:: both
 flag whether to distinguish upper/lower or to respond to both.
