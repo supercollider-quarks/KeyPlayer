@@ -80,9 +80,6 @@ KeyPlayer {
 	storeArgs { ^[key] }
 	printOn { |stream| ^this.storeOn(stream) }
 
-	*gui { if (gui.isNil or: { gui.parent.isClosed }){ gui = KeyPlayerGui() }; ^gui.front; }
-
-	gui { ^KeyPlayerGui(this) }
 
 	makeLoop { rec = KeyLoop(key, KeyLoop.keyPlayerFunc(this)); }
 
@@ -194,8 +191,5 @@ KeyPlayer {
 	//
 	// read { |path| this.putAll(path.load ? ()); }
 
-	saveDoc {
-		Document("save my actions").string_(this.actions.asCompileString);
-	}
 }
 
